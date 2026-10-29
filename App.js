@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import {StyleSheet, Text , View , Image , ScrollView} from 'react-native';
-import {Boat} from "./boat.js";
+import {Boat} from "./Boat.js";
 
 const boats = [
     {
