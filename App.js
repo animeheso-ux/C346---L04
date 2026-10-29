@@ -2,36 +2,45 @@ import { StatusBar } from 'expo-status-bar';
 import {StyleSheet, Text , View , Image , ScrollView} from 'react-native';
 import {Boat} from "./Boat.js";
 
+//CONFIGURATION
+
 const boats = [
     {
         name: 'Sea Ray 500 Sundancer',
         description: 'Contoured lines and dramatic styling reveal a refined and powerful presence that will take your breath away.',
-        picture: './assets/img/sea_ray.jpg'
+        picture: './assets/img/sea_ray.jpg',
+        icon : "ship"
     },
     {
         name: 'Four Winns Horizon 180',
         description: 'A sporty look and refined details truly set the Horizon 180 above all others.',
-        picture: './assets/img/four_winns.jpg'
+        picture: './assets/img/four_winns.jpg',
+        icon : "sailboat"
     },
     {
         name: 'Flipper 640 ST',
         description: 'A modern take on the classic, traditional hardtop and perfect for a family picnic.',
-        picture: './assets/img/flipper.jpg'
+        picture: './assets/img/flipper.jpg',
+        icon : "sailboat"
     },
     {
         name: 'Princess V48',
         description: 'There is the option for an open design with a full-length cockpit and sunroof, or the enclosed deck saloon model, available with the option of a climate controlled interior.',
-        picture: './assets/img/princess.jpg'
+        picture: './assets/img/princess.jpg',
+        icon : "anchor"
     },
     {
         name: 'Bayliner 175 Bowrider',
         description: 'Its outboard power gives you increased cockpit space and quiet, fuel-efficient performance.',
-        picture: './assets/img/bayliner.jpg'
+        picture: './assets/img/bayliner.jpg',
+        icon : "anchor"
     },
     {
         name: 'Fairline Targa 47',
         description: 'Stretch out on the large sun bed aft while friends lounge in the generously appointed cockpit.',
-        picture: './assets/img/fairline.jpg'
+        picture: './assets/img/fairline.jpg',
+        icon : "sailboat"
+
     }
 ];
 
@@ -53,7 +62,7 @@ const AllBoats = () => {
   return (<View>
       {boats.map((boat,index)=> {
           return (<View key={index}>
-              <Boat brandIcon={"ship"} brandName={boat.name} boatImage={boatImages[boat.picture]} description={boat.description}/>
+              <Boat brandIcon={boat.icon} brandName={boat.name} boatImage={boatImages[boat.picture]} description={boat.description}/>
           </View>)
       })}
   </View>)
